@@ -1,0 +1,25 @@
+.sales-by-date-container {
+  width: 100%;
+  height: 390px;
+  padding: 25px 15px 50px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sales-by-date-quantity {
+  font-size: 36px;
+  color: var(--blue-color);
+}
+
+.sales-by-date-quantity-label {
+  font-size: 18px;
+  color: var(--grey-light-50-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.apescharts-legend.apexcharts-align-center {
+  flex-direction: column;
+  align-items: center;
+}
