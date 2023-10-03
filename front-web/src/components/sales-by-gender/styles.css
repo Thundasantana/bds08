@@ -1,0 +1,73 @@
+.pie-chart-card {
+  padding-top: 35px;
+  justify-content: center;
+  height: 617px;
+  width: 500px;
+  margin-left: 10px;
+}
+
+.sales-by-gender-quantity {
+  text-align: center;
+  font-size: 36px;
+  color: var(--blue-color);
+}
+
+.sales-by-gender-quantity-label {
+  text-align: center;
+  font-size: 18px;
+  color: var(--grey-light-50-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sales-by-gender-container {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+@media (min-width: 576px) {
+  .pie-chart-card {
+    width: 496px;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .pie-chart-card {
+    width: 688px;
+    margin-left: 25px;
+  }
+
+  .sales-by-gender-quantity-label {
+    margin-right: 400px;
+  }
+  .sales-by-gender-quantity {
+    margin-right: 400px;
+  }
+  .sales-by-gender-container {
+    margin-left: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .pie-chart-card {
+    display: flex;
+    width: 960px;
+    height: 421px;
+    margin-left: 5px;
+  }
+  .sales-by-gender-quantity-label {
+    margin-right: 200px;
+    margin-bottom: 150px;
+  }
+  .sales-by-gender-quantity {
+    margin-right: 200px;
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pie-chart-card {
+    margin-left: 100px;
+  }
+}
