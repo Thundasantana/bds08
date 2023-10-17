@@ -2255,11 +2255,6 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yr/monotone-cubic-spline@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@yr/monotone-cubic-spline/-/monotone-cubic-spline-1.0.3.tgz#7272d89f8e4f6fb7a1600c28c378cc18d3b577b9"
-  integrity sha512-FQXkOta0XBSUPHndIKON2Y9JeQz5ZeMqLYZVVK93FliNBFm7LNMIZmY6FrMEB9XPcDbE2bekMbZD6kzDkxwYjA==
-
 abab@^2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
@@ -2434,12 +2429,11 @@ anymatch@^3.0.3, anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-apexcharts@^3.42.0:
-  version "3.42.0"
-  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.42.0.tgz#143eb4a12d93c59a37dd88efcf0c7ed0d9ab8735"
-  integrity sha512-hYhzZqh2Efny9uiutkGU2M/EarJ4Nn8s6dxZ0C7E7N+SV4d1xjTioXi2NLn4UKVJabZkb3HnpXDoumXgtAymwg==
+apexcharts@^3.41.1:
+  version "3.41.1"
+  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.41.1.tgz#69669ae6225d4e7a32bdfd9750157e236d56b6e6"
+  integrity sha512-kta8fhXrfZYqW7K9kF7FqZ6imQaC6moyRgcUZjwIky/oeHVVISSN/2rjUIvZXnwxWHiSdDHMqLy+TqJhB4DXFA==
   dependencies:
-    "@yr/monotone-cubic-spline" "^1.0.3"
     svg.draggable.js "^2.2.2"
     svg.easing.js "^2.0.0"
     svg.filter.js "^2.0.2"
@@ -2664,10 +2658,10 @@ axe-core@^4.0.2:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.2.tgz#7cf783331320098bfbef620df3b3c770147bc224"
   integrity sha512-V+Nq70NxKhYt89ArVcaNL9FDryB3vQOd+BFXZIfO3RP6rwtj+2yqqqdHEkacutglPaZLkJeuXKCjCJDMGPtPqg==
 
-axios@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.5.0.tgz#f02e4af823e2e46a9768cfc74691fdd0517ea267"
-  integrity sha512-D4DdjDo5CY50Qms0qGQTTw6Q44jl7zRwY7bthds06pUGfChBCTcQs+N743eFWGEd6pRTMd6A+I87aWyFV5wiZQ==
+axios@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
+  integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -9429,10 +9423,10 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
-react-flatpickr@^3.10.13:
-  version "3.10.13"
-  resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.10.13.tgz#5b9d8f35f84e43f342fb0f0334b78a8dcd7d67c4"
-  integrity sha512-4m+K1K8jhvRFI8J/AHmQfA5hLALzhebEtEK8mLevXjX24MV3u502crzBn+EGFIBOfNUtrL5PId9FsGwgtuz/og==
+react-flatpickr@^3.10.7:
+  version "3.10.7"
+  resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.10.7.tgz#bca6da2a1ccf23bb884881e2a1723073f0bfb391"
+  integrity sha512-dJ7cZAayefqWJnX4Xe8Piy13oK2h4aeGCH9tz+D2iSNh+kbezUAWVMVCKdTqjsNBqTMS4v0DkfMy2CP2atNCTQ==
   dependencies:
     flatpickr "^4.6.2"
     prop-types "^15.5.10"

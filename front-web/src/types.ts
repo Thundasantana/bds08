@@ -23,7 +23,7 @@ export type SalesSummary = {
 };
 
 export type AllStore = {
-  storeName: string;
+  name: string;
   id: number;
 };
 

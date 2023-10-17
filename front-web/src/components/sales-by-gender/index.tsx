@@ -1,8 +1,8 @@
 import './styles.css';
 import ReactApexChart from 'react-apexcharts';
 import { buildChartSeries, buildPieChartConfig, sumSalesByGender } from './helpers';
-import { useEffect, useState } from 'react';
-import { makeRequest } from '../../utils/request';
+import { useEffect, useMemo, useState } from 'react';
+import { buildFilterParams, makeRequest } from '../../utils/request';
 import { ChartSeriesData, FilterGender, SalesByGender } from '../../types';
 import { formatPrice } from '../../utils/formatters';
 
@@ -17,14 +17,16 @@ function SalesByGenderComponent({ filterGender, labels = [], name, series = [] }
   const [chartSeries, setChartSeries] = useState<ChartSeriesData[]>([]);
   const [totalSum, setTotalSum] = useState(0);
 
+  const params = useMemo(() => buildFilterParams(filterGender), [filterGender]);
+
   useEffect(() => {
     makeRequest.get<SalesByGender[]>('/sales/by-gender?storeId=0').then((response) => {
       const newChartSeries = buildChartSeries(response.data);
-      setChartSeries(newChartSeries);
       const newTotalSum = sumSalesByGender(response.data);
+      setChartSeries(newChartSeries);
       setTotalSum(newTotalSum);
     });
-  }, []);
+  }, [params]);
 
   return (
     <div className="pie-chart-card base-card">
@@ -33,7 +35,6 @@ function SalesByGenderComponent({ filterGender, labels = [], name, series = [] }
         <span className="sales-by-gender-quantity-label">Total de vendas</span>
       </div>
       <div className="sales-by-gender-container">
-        {filterGender?.gender?.[0]}
         <ReactApexChart
           options={buildPieChartConfig(labels, name)}
           type="donut"

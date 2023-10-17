@@ -6,6 +6,11 @@
   margin-left: 10px;
 }
 
+.apexcharts-legend.apexcharts-align-center {
+  flex-direction: column;
+  align-items: center;
+}
+
 .sales-by-gender-quantity {
   text-align: center;
   font-size: 36px;
