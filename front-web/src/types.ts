@@ -10,21 +10,18 @@ export type ChartSeriesData = {
   y: number;
 };
 
-export type FilterGender = {
-  gender?: Gender;
-};
-
-export type SalesSummary = {
-  sum?: number;
-  min: number;
-  max: number;
-  avg: number;
-  count: number;
+export type FilterStore = {
+  stores: number | undefined;
 };
 
 export type AllStore = {
   name: string;
   id: number;
+};
+
+export type SalesByGender2 = {
+  gender: string;
+  sum: number;
 };
 
 export type PieChartConfig = {

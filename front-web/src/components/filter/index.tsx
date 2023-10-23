@@ -1,28 +1,44 @@
 import './styles.css';
-import { useState } from 'react';
-import { FilterGender, Gender } from '../../types';
+import { useEffect, useState } from 'react';
+import { AllStore } from '../../types';
+import { makeRequest } from '../../utils/request';
+
+export type FilterData = {
+  story: AllStore | null;
+};
 
 type Props = {
-  onFilterChange: (filter: FilterGender) => void;
+  onFilterChange: (data: number) => void;
 };
 
 function Filter({ onFilterChange }: Props) {
-  const [gender, setGender] = useState<Gender>();
+  const [store, setStore] = useState<AllStore>();
+  const [storeList, setStoreList] = useState<AllStore[]>();
 
-  const onChangeGender = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedGender = event.target.value as Gender;
+  const onChangeStore = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedStore = event.target.value;
 
-    setGender(selectedGender);
-    onFilterChange({ gender: selectedGender });
+    onFilterChange(selectedStore as unknown as number);
+    console.log(selectedStore);
   };
+
+  useEffect(() => {
+    makeRequest.get<AllStore[]>('/stores').then((response) => {
+      setStoreList(response.data);
+    });
+  }, []);
 
   return (
     <div className="filter-container base-card">
-      <select className="filter-input" value={gender} onChange={onChangeGender}>
-        <option value="">Selecione um gênero</option>
-        <option value="MALE">Masculino</option>
-        <option value="FEMALE">Feminino</option>
-        <option value="OTHER">Outro</option>
+      <select className="filter-input" value={store?.id} onChange={onChangeStore}>
+        <option value="0">Selecione uma cidade</option>
+        {storeList?.map((store) => {
+          return (
+            <option key={store.id} value={store.id}>
+              {store.name}
+            </option>
+          );
+        })}
       </select>
     </div>
   );
