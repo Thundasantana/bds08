@@ -1,12 +1,10 @@
 .filter-container {
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 130px;
   display: flex;
   align-items: center;
   padding-left: 30px;
-  width: 500px;
-  margin-left: 10px;
 }
 
 .filter-input {
@@ -17,32 +15,53 @@
   font-size: 16px;
   border: 1px solid var(--grey-light-50-color);
   border-radius: 4px;
-  padding: 12px 5px 12px 20px;
+  padding-left: 12px;
 }
 
 @media (min-width: 576px) {
   .filter-container {
-    width: 496px;
-    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 186px 40px 40px;
   }
 }
 
 @media (min-width: 768px) {
   .filter-container {
-    width: 688px;
-    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 378px 40px 40px;
   }
 }
 
 @media (min-width: 992px) {
   .filter-container {
-    width: 960px;
-    margin-left: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 650px 40px 40px;
   }
 }
 
 @media (min-width: 1200px) {
   .filter-container {
-    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 650px 40px 40px;
   }
 }
